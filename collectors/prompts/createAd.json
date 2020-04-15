@@ -1,0 +1,32 @@
+[
+  {
+    "question": "What is your dodo code?",
+    "answer": "12415"
+  },
+  {
+    "question": "How many visitors would you like to host?",
+    "answer": "40"
+  },
+  {
+    "question": "How many visitors per group?",
+    "answer": {
+      "default": "4",
+      "custom": ""
+    }
+  },
+  {
+    "question": "Which tip message would you like to leave?",
+    "answer": {
+      "default": "Tips are appreciated, but not necessary. Thank you!",
+      "none": "No tips, thank you!",
+      "custom": ""
+    }
+  },
+  {
+    "question": "What rules would you like visitors to follow?",
+    "answer": {
+      "default": "Please wait by the Dodoport until everyone arrives, I will walk the group to Nook's Cranny.",
+      "custom": ""
+    }
+  }
+]

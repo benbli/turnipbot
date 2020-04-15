@@ -2,17 +2,18 @@
   "name": "turnip-bot",
   "version": "0.0.1",
   "description": "",
-  "main": "index.js",
+  "main": "bot.js",
   "scripts": {
-    "watch": "nodemon index.js"
+    "start": "node bot.js",
+    "watch": "nodemon bot.js"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "airtable": "^0.8.1",
     "discord.js": "^12.1.1",
-    "dotenv": "^8.2.0"
+    "dotenv": "^8.2.0",
+    "node-fetch": "^2.6.0"
   },
   "devDependencies": {
     "nodemon": "^2.0.2"

@@ -1,10 +1,13 @@
+const questions = require('../collectors/prompts/createAd.json');
+
 module.exports = {
   name: 'create',
-  description: 'Create a new listing',
+  description: 'create a new ad',
+  usage: '<price>',
   args: true,
-  usage: `<dodoCode>`,
   cooldown: 10,
-  execute(message, args) {
+  execute: async (bot, message, args) => {
+    console.log(questions);
     message.reply(`create a listing`);
   }
 };

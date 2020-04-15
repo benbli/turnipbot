@@ -1,9 +1,9 @@
-const { VERSION } = require('../config.json');
+const { VERSION } = require('../settings.json');
 
 module.exports = {
   name: 'version',
-  description: 'Version',
-  execute(message, args) {
+  description: 'show the version number',
+  execute: async (bot, message, args) => {
     message.channel.send(VERSION);
   }
 };
