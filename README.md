@@ -7,7 +7,6 @@ Manage your turnip ad queue
 !nips \<command> \<argument>
 
 ### Commands
-
 |                        |                          |
 | :--------------------- | :----------------------- |
 | !nips register \<name> | register your villager   |
@@ -16,7 +15,6 @@ Manage your turnip ad queue
 | !nips status           | show your current status |
 | !nips version          | show the version number  |
 | !nips help             | turnip bot help manual   |
-
 ### Queue Commands
 
 |                       |                           |
@@ -25,6 +23,5 @@ Manage your turnip ad queue
 | !nips stop            | stop current queue        |
 | !nips next            | start next group in queue |
 | !nips yeet \<user id> | kick a user               |
-
 
 ### Guides
