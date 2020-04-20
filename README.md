@@ -1,39 +1,30 @@
-# Turnip Bot
+# Turnip Bot (v0.0.1)
 
-Manage your turnip queue (v0.0.1)
+Manage your turnip ad queue
 
-### Usage:
+### Usage
 
-!nips <command> <argument>
+!nips \<command> \<argument>
 
-### Commands:
+### Commands
 
-!nips register show who you are logged in as
-!nips create show who you are logged in as
-!nips join expire local token
-!nips status only performs authentication step
-!nips version only performs authentication step
-!nips help only performs authentication step
+|                        |                          |
+| :--------------------- | :----------------------- |
+| !nips register \<name> | register your villager   |
+| !nips create \<price>  | create a new ad          |
+| !nips join \<ad id>    | join a queue             |
+| !nips status           | show your current status |
+| !nips version          | show the version number  |
+| !nips help             | turnip bot help manual   |
+
+### Queue Commands
 
-## Features
+|                       |                           |
+| :-------------------- | :------------------------ |
+| !nips start           | start a queue             |
+| !nips stop            | stop current queue        |
+| !nips next            | start next group in queue |
+| !nips yeet \<user id> | kick a user               |
+
 
-- Create a new turnip listing
--
-
-### Guides:
-
-Getting started surge.sh/help/getting-started-with-surge
-Custom domains surge.sh/help/adding-a-custom-domain
-Additional help surge.sh/help
-
-// user id
-// message.author.id
-
-// if (isNaN(parseInt(price))) msg.reply(`please enter a valid number`)
-
-// user's avatar
-// message.author.displayAvatarURL
-
-// let msg = await message.channel.send('gererating something async...')
-// do the await fn()
-// msg.delete()
+### Guides

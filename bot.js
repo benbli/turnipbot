@@ -1,8 +1,8 @@
-require("dotenv").config();
+require('dotenv').config();
 
-const fs = require("fs");
-const Discord = require("discord.js");
-const { PREFIX } = require("./settings.json");
+const fs = require('fs');
+const Discord = require('discord.js');
+const { PREFIX } = require('./bot-settings.json');
 
 const bot = new Discord.Client({ disableEveryone: true });
 bot.commands = new Discord.Collection();
@@ -10,8 +10,8 @@ const cooldowns = new Discord.Collection();
 
 // Require all commands dynamically from commands folder
 const commandFiles = fs
-  .readdirSync("./commands")
-  .filter((file) => file.endsWith(".js"));
+  .readdirSync('./commands')
+  .filter((file) => file.endsWith('.js'));
 
 // Set each command onto the collection in the bot
 for (const file of commandFiles) {
@@ -21,7 +21,7 @@ for (const file of commandFiles) {
 
 bot.login(process.env.DISCORD_TOKEN);
 
-bot.once("ready", async () => {
+bot.once('ready', async () => {
   console.log(`${bot.user.username} online! `);
   // try {
   //   let link = await bot.generateInvite(['ADMINISTRATOR']);
@@ -39,7 +39,7 @@ bot.once("ready", async () => {
   // }
 });
 
-bot.on("message", async (msg) => {
+bot.on('message', async (msg) => {
   // Early exit for irrelevant/bot messages
   if (!msg.content.startsWith(PREFIX) || msg.author.bot) return;
 
@@ -98,11 +98,11 @@ bot.on("message", async (msg) => {
 });
 
 // Detect websocket or network connection errors
-bot.on("shardError", (error) => {
-  console.error("A websocket connection encountered an error:", error);
+bot.on('shardError', (error) => {
+  console.error('A websocket connection encountered an error:', error);
 });
 
 // Handle node side errors
-process.on("unhandledRejection", (error) => {
-  console.error("Unhandled promise rejection", error);
+process.on('unhandledRejection', (error) => {
+  console.error('Unhandled promise rejection', error);
 });

@@ -1,13 +1,13 @@
-const { createAdEmbed } = require("../embeds/adEmbed.js");
-const ads = require("../api/controllers/ads.js");
-const users = require("../api/controllers/users.js");
-const { buildDiscordId } = require("../util/helpers.js");
-const { NUMS } = require("../settings.json");
+const { createAdEmbed } = require('../embeds/adEmbed.js');
+const ads = require('../api/controllers/ads.js');
+const users = require('../api/controllers/users.js');
+const { buildDiscordId } = require('../util/helpers.js');
+const { NUMS } = require('../bot-settings.json');
 
 module.exports = {
-  name: "create",
-  description: "create a new ad",
-  usage: "<price>",
+  name: 'create',
+  description: 'create a new ad',
+  usage: '<price>',
   args: true,
   argLength: 1,
   cooldown: 1,

@@ -1,4 +1,4 @@
-const { colors } = require("../settings.json");
+const { colors } = require('../bot-settings.json');
 exports.createAdEmbed = (record) => {
   const {
     user_id,
@@ -14,37 +14,37 @@ exports.createAdEmbed = (record) => {
     title: `Turnip Ad`,
     fields: [
       {
-        name: "Hosted by",
+        name: 'Hosted by',
         value: user_id,
       },
       {
-        name: "Turnip price",
+        name: 'Turnip price',
         value: price,
       },
       {
-        name: "Visitors to host",
+        name: 'Visitors to host',
         value: total_visitors,
       },
       {
-        name: "Group size",
+        name: 'Group size',
         value: group_size,
       },
       {
-        name: "Tip message",
+        name: 'Tip message',
         value: tip,
       },
       {
-        name: "Rules/FAQ",
+        name: 'Rules/FAQ',
         value: rule,
       },
       {
-        name: "Reentry allowed",
+        name: 'Reentry allowed',
         value: reentry,
       },
     ],
 
     footer: {
-      text: "</> by bjm",
+      text: '</> by bjm',
     },
   };
 };

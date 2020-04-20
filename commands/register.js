@@ -1,13 +1,13 @@
-const users = require("../api/controllers/users.js");
+const users = require('../api/controllers/users.js');
 
 // TODO:
 // Validate string for villager's name
 // On register success, send back visual confirmation (ie. Villager's profile)
 
 module.exports = {
-  name: "register",
-  description: "register your villager",
-  usage: "<name>",
+  name: 'register',
+  description: 'register your villager',
+  usage: '<name>',
   args: true,
   argLength: 1,
   cooldown: 5,

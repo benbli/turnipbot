@@ -1,7 +1,7 @@
 exports.getAirtableRecords = (table, options) => {
   let records = [];
   let params = {
-    view: "Grid view",
+    view: 'Grid view',
     pageSize: 100, // default
   };
 
