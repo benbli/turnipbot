@@ -1,8 +1,8 @@
 exports.getAirtableRecords = (table, options) => {
   let records = [];
   let params = {
-    view: 'Grid view',
-    pageSize: 100 // default
+    view: "Grid view",
+    pageSize: 100, // default
   };
 
   Object.assign(params, options);
@@ -15,7 +15,7 @@ exports.getAirtableRecords = (table, options) => {
       fetchNextPage();
     };
 
-    const processRecords = err => {
+    const processRecords = (err) => {
       if (err) {
         reject(err);
         return;
@@ -25,4 +25,8 @@ exports.getAirtableRecords = (table, options) => {
 
     table.select(params).eachPage(processPage, processRecords);
   });
+};
+
+exports.updateRecord = (table, recordId, fieldsToUpdate) => {
+  return table.update(recordId, fieldsToUpdate);
 };

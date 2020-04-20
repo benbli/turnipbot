@@ -5,7 +5,8 @@
   "main": "bot.js",
   "scripts": {
     "start": "node bot.js",
-    "watch": "nodemon bot.js"
+    "watch": "nodemon bot.js",
+    "pretty": "prettier --write '**/*.js'"
   },
   "keywords": [],
   "author": "",
@@ -16,6 +17,7 @@
     "node-fetch": "^2.6.0"
   },
   "devDependencies": {
-    "nodemon": "^2.0.2"
+    "nodemon": "^2.0.2",
+    "prettier": "^2.0.4"
   }
 }

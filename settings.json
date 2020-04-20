@@ -3,5 +3,9 @@
   "VERSION": "0.0.1",
   "colors": {
     "CONFIRM": "0x58d68d"
+  },
+  "NUMS": {
+    "MIN": 90,
+    "MAX": 700
   }
 }

@@ -5,10 +5,10 @@
 // buyer: show elapsed time, any delays, current line in queue
 // is next
 module.exports = {
-  name: 'status',
-  description: 'show your current status',
+  name: "status",
+  description: "show your current status",
   cooldown: 3,
   execute: async (bot, message, args) => {
-    message.channel.send('Current status:');
-  }
+    message.channel.send("Current status:");
+  },
 };

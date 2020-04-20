@@ -1,13 +1,13 @@
+const users = require("../api/controllers/users.js");
+
 // TODO:
 // Validate string for villager's name
-// On register success, send back visual confirmation (user's profile)
-
-const users = require('../api/controllers/users.js');
+// On register success, send back visual confirmation (ie. Villager's profile)
 
 module.exports = {
-  name: 'register',
-  description: 'register your villager',
-  usage: '<name>',
+  name: "register",
+  description: "register your villager",
+  usage: "<name>",
   args: true,
   argLength: 1,
   cooldown: 5,
@@ -25,13 +25,13 @@ module.exports = {
     const userData = {
       user_id: targetId,
       villager_name: args[0], // validation needed
-      avatar: message.author.displayAvatarURL()
+      avatar: message.author.displayAvatarURL(),
     };
 
     try {
-      const sucess = await users.registerUser(userData);
+      const registeredUser = await users.registerUser(userData);
 
-      if (sucess) {
+      if (registeredUser) {
         message.channel.send(`success!`);
         // send back user profile embed {userProfileEmbed}
         return;
@@ -40,5 +40,5 @@ module.exports = {
       console.log(err.stack);
       throw err;
     }
-  }
+  },
 };
