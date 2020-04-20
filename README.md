@@ -7,7 +7,7 @@ Manage your turnip ad queue
 !nips \<command> \<argument>
 
 ### Commands
-|                        |                          |
+| Name                   | Description              |
 | :--------------------- | :----------------------- |
 | !nips register \<name> | register your villager   |
 | !nips create \<price>  | create a new ad          |
@@ -17,7 +17,7 @@ Manage your turnip ad queue
 | !nips help             | turnip bot help manual   |
 ### Queue Commands
 
-|                       |                           |
+| Name                  | Description               |
 | :-------------------- | :------------------------ |
 | !nips start           | start a queue             |
 | !nips stop            | stop current queue        |
