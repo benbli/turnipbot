@@ -1,6 +1,7 @@
 require('dotenv').config();
 const Airtable = require('airtable');
 const { ad } = require('../json/ad.json');
+const db = require('./data');
 
 const base = new Airtable({
   apiKey: process.env.AIRTABLE_API_KEY,
@@ -15,6 +16,18 @@ exports.createAdRecord = async (price, userRecord) => {
       user_id: [userRecord.id],
       ...ad,
     });
+  } catch (err) {
+    console.log(err.stack);
+    throw err;
+  }
+};
+
+exports.listAllActiveAds = async () => {
+  try {
+    const options = {
+      filterByFormula: `active = 'true'`,
+    };
+    return await db.getAirtableRecords(table, options);
   } catch (err) {
     console.log(err.stack);
     throw err;

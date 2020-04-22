@@ -42,7 +42,6 @@ exports.createAdEmbed = (record) => {
         value: reentry,
       },
     ],
-
     footer: {
       text: '</> by bjm',
     },

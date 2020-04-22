@@ -11,23 +11,23 @@ module.exports.createHelpEmbed = (message) => {
       { name: 'Usage', value: '!nips <command> <argument>' },
       {
         name: 'Commands',
-        value: commandNames(commands),
+        value: listNames(commands),
         inline: true,
       },
       {
         name: '\b',
-        value: commandDescriptions(commands),
+        value: listDescriptions(commands),
         inline: true,
       },
       { name: '\b', value: '\b', inline: true },
       {
         name: 'Queue Commands',
-        value: commandNames(hostCommands),
+        value: listNames(hostCommands),
         inline: true,
       },
       {
         name: '\b',
-        value: commandDescriptions(hostCommands),
+        value: listDescriptions(hostCommands),
         inline: true,
       },
       { name: '\b', value: '\b', inline: true },
@@ -38,7 +38,7 @@ module.exports.createHelpEmbed = (message) => {
   };
 };
 
-function commandNames(commands) {
+function listNames(commands) {
   let list = '';
   for (const cmd in commands) {
     list += `${commands[cmd].name} ${commands[cmd].usage || ''}\n`;
@@ -46,7 +46,7 @@ function commandNames(commands) {
   return list;
 }
 
-function commandDescriptions(commands) {
+function listDescriptions(commands) {
   let description = '';
   for (const cmd in commands) {
     description += `${commands[cmd].description}\n`;
